@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Intent Classification from EEG - Eric</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Motor Intent Classification from EEG Signals</h1>
+        <p class="subtitle">Classify motor intent from EEG signals for brain-computer interface applications</p>
+        
+        <div class="upload-section">
+            <h2>Upload EEG Signal Data</h2>
+            <div class="upload-area">
+                <input type="file" id="fileInput" class="file-input" accept=".csv,.txt,.edf">
+                <label for="fileInput" class="file-label">Upload EEG Signal File</label>
+            </div>
+            <p style="margin-top: 15px; color: #666;">Or enter EEG signal features manually:</p>
+            <form id="predictionForm" style="margin-top: 20px;">
+                <div class="form-group">
+                    <label class="form-label">Alpha Band Power (8-13 Hz):</label>
+                    <input type="number" class="form-input" id="alphaPower" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Beta Band Power (13-30 Hz):</label>
+                    <input type="number" class="form-input" id="betaPower" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Gamma Band Power (30-100 Hz):</label>
+                    <input type="number" class="form-input" id="gammaPower" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mu Rhythm Power (8-12 Hz):</label>
+                    <input type="number" class="form-input" id="muPower" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Motor Cortex Channel (C3/C4):</label>
+                    <select class="form-input" id="channel" required>
+                        <option value="C3">C3 (Left motor cortex)</option>
+                        <option value="C4">C4 (Right motor cortex)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Target Movement:</label>
+                    <select class="form-input" id="movement" required>
+                        <option value="left_hand">Left Hand</option>
+                        <option value="right_hand">Right Hand</option>
+                        <option value="left_foot">Left Foot</option>
+                        <option value="right_foot">Right Foot</option>
+                        <option value="tongue">Tongue</option>
+                        <option value="rest">Rest</option>
+                    </select>
+                </div>
+                <button type="submit" class="predict-btn">Classify Motor Intent</button>
+            </form>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Classification Results</h2>
+            <div class="result-item">
+                <div class="result-label">Predicted Motor Intent:</div>
+                <div class="result-value" id="predictedIntent"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Confidence:</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="confidenceBar" style="width: 0%"></div>
+                </div>
+                <div id="confidenceValue" style="margin-top: 10px;"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Intent Distribution:</div>
+                <div id="intentDistribution"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This model classifies motor intent from EEG signals for brain-computer interface (BCI) applications. It analyzes frequency band powers and motor cortex activity to predict intended movements, enabling control of assistive devices.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/bharath011/brain-wave-dataset" target="_blank">Brain Wave Dataset</a></p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endovascular Procedure Success Prediction - Sammy</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Endovascular Procedure Success Prediction</h1>
+        <p class="subtitle">Predict procedure success from patient anatomy and device characteristics</p>
+        
+        <div class="upload-section">
+            <h2>Enter Patient and Procedure Data</h2>
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label class="form-label">Patient Age:</label>
+                    <input type="number" class="form-input" id="age" min="18" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Vessel Diameter (mm):</label>
+                    <input type="number" class="form-input" id="vesselDiameter" step="0.1" min="2" max="20" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Lesion Length (mm):</label>
+                    <input type="number" class="form-input" id="lesionLength" step="0.1" min="1" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Device Type:</label>
+                    <select class="form-input" id="deviceType" required>
+                        <option value="">Select device type</option>
+                        <option value="stent">Stent</option>
+                        <option value="balloon">Balloon Angioplasty</option>
+                        <option value="atherectomy">Atherectomy</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Comorbidity Score:</label>
+                    <input type="number" class="form-input" id="comorbidityScore" min="0" max="10" required>
+                </div>
+                <button type="submit" class="predict-btn">Predict Procedure Success</button>
+            </form>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Prediction Results</h2>
+            <div class="result-item">
+                <div class="result-label">Predicted Outcome:</div>
+                <div class="result-value" id="predictedOutcome"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Success Probability:</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="successBar" style="width: 0%"></div>
+                </div>
+                <div id="successValue" style="margin-top: 10px;"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Risk Factors Identified:</div>
+                <div id="riskFactors"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This model predicts the success probability of endovascular procedures based on patient anatomy, device characteristics, and clinical factors. The model was trained on the Vascular Surgery Outcomes dataset from Kaggle.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/andrewmvd/vascular-surgery-outcomes" target="_blank">Vascular Surgery Outcomes</a></p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+

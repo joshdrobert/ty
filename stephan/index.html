@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Sickness Severity Prediction - Stephan</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Motion Sickness Severity Prediction</h1>
+        <p class="subtitle">Predict motion sickness severity from physiological monitoring data during simulated spaceflight conditions</p>
+        
+        <div class="upload-section">
+            <h2>Enter Physiological Data</h2>
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label class="form-label">Heart Rate (bpm):</label>
+                    <input type="number" class="form-input" id="heartRate" min="50" max="150" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Heart Rate Variability (ms):</label>
+                    <input type="number" class="form-input" id="hrv" step="0.1" min="20" max="200" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Skin Conductance (μS):</label>
+                    <input type="number" class="form-input" id="skinConductance" step="0.1" min="0" max="50" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Body Temperature (°C):</label>
+                    <input type="number" class="form-input" id="temperature" step="0.1" min="36" max="38.5" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Motion Intensity (g):</label>
+                    <input type="number" class="form-input" id="motionIntensity" step="0.1" min="0" max="5" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Duration of Exposure (minutes):</label>
+                    <input type="number" class="form-input" id="duration" min="0" max="120" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Previous Motion Sickness History:</label>
+                    <select class="form-input" id="history" required>
+                        <option value="none">None</option>
+                        <option value="mild">Mild</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="severe">Severe</option>
+                    </select>
+                </div>
+                <button type="submit" class="predict-btn">Predict Motion Sickness Severity</button>
+            </form>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Prediction Results</h2>
+            <div class="result-item">
+                <div class="result-label">Predicted Severity:</div>
+                <div class="result-value" id="severity"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Severity Probability:</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="severityBar" style="width: 0%"></div>
+                </div>
+                <div id="severityValue" style="margin-top: 10px;"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Risk Factors:</div>
+                <div id="riskFactors"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Mitigation Recommendations:</div>
+                <div id="recommendations"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This model predicts motion sickness severity from physiological monitoring data during simulated spaceflight conditions. Understanding and predicting motion sickness is important for space missions and other motion environments.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/andrewmvd/motion-sickness-physiological-data" target="_blank">Motion Sickness Physiological Data</a></p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+

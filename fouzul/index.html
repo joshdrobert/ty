@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAD Severity Prediction - Fouzul</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Peripheral Arterial Disease Severity Prediction</h1>
+        <p class="subtitle">Predict PAD severity and amputation risk from ABI, demographics, and comorbidities</p>
+        
+        <div class="upload-section">
+            <h2>Enter Patient Data</h2>
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label class="form-label">Ankle-Brachial Index (ABI):</label>
+                    <input type="number" class="form-input" id="abi" step="0.01" min="0.3" max="1.5" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Age:</label>
+                    <input type="number" class="form-input" id="age" min="40" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Diabetes:</label>
+                    <select class="form-input" id="diabetes" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Smoking Status:</label>
+                    <select class="form-input" id="smoking" required>
+                        <option value="never">Never</option>
+                        <option value="former">Former</option>
+                        <option value="current">Current</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Hypertension:</label>
+                    <select class="form-input" id="hypertension" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Coronary Artery Disease:</label>
+                    <select class="form-input" id="cad" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Chronic Kidney Disease:</label>
+                    <select class="form-input" id="ckd" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Rutherford Classification:</label>
+                    <select class="form-input" id="rutherford" required>
+                        <option value="0">0 - Asymptomatic</option>
+                        <option value="1">1 - Mild claudication</option>
+                        <option value="2">2 - Moderate claudication</option>
+                        <option value="3">3 - Severe claudication</option>
+                        <option value="4">4 - Ischemic rest pain</option>
+                        <option value="5">5 - Minor tissue loss</option>
+                        <option value="6">6 - Major tissue loss</option>
+                    </select>
+                </div>
+                <button type="submit" class="predict-btn">Predict PAD Severity & Amputation Risk</button>
+            </form>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Prediction Results</h2>
+            <div class="result-item">
+                <div class="result-label">PAD Severity:</div>
+                <div class="result-value" id="severity"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Amputation Risk (5-year):</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="amputationBar" style="width: 0%"></div>
+                </div>
+                <div id="amputationValue" style="margin-top: 10px;"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Risk Factors:</div>
+                <div id="riskFactors"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Treatment Recommendations:</div>
+                <div id="recommendations"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This model predicts peripheral arterial disease (PAD) severity and amputation risk based on ankle-brachial index (ABI), patient demographics, and comorbidities. PAD affects millions of people and can lead to limb loss if not properly managed.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/andrewmvd/peripheral-arterial-disease" target="_blank">Peripheral Arterial Disease</a></p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+

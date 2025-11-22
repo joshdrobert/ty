@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bladder Cancer Recurrence Prediction - Sabour</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Bladder Cancer Recurrence Prediction</h1>
+        <p class="subtitle">Predict bladder cancer recurrence from histopathology images and clinical features</p>
+        
+        <div class="upload-section">
+            <h2>Upload Histopathology Image</h2>
+            <div class="upload-area">
+                <input type="file" id="imageInput" class="file-input" accept="image/*">
+                <label for="imageInput" class="file-label">Choose Histopathology Image</label>
+            </div>
+            <div class="preview-section" id="previewSection" style="display: none;">
+                <img id="previewImage" class="preview-image" alt="Preview">
+            </div>
+            <p style="margin-top: 15px; color: #666;">Enter clinical features:</p>
+            <form id="predictionForm" style="margin-top: 20px;">
+                <div class="form-group">
+                    <label class="form-label">Tumor Stage:</label>
+                    <select class="form-input" id="stage" required>
+                        <option value="Ta">Ta - Non-invasive papillary</option>
+                        <option value="T1">T1 - Invades subepithelial connective tissue</option>
+                        <option value="T2">T2 - Invades muscle</option>
+                        <option value="T3">T3 - Invades perivesical tissue</option>
+                        <option value="T4">T4 - Invades adjacent organs</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Tumor Grade:</label>
+                    <select class="form-input" id="grade" required>
+                        <option value="low">Low Grade</option>
+                        <option value="high">High Grade</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Tumor Size (cm):</label>
+                    <input type="number" class="form-input" id="tumorSize" step="0.1" min="0.5" max="10" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Number of Tumors:</label>
+                    <input type="number" class="form-input" id="numTumors" min="1" max="10" required>
+                </div>
+                <button type="submit" class="predict-btn">Predict Recurrence Risk</button>
+            </form>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Prediction Results</h2>
+            <div class="result-item">
+                <div class="result-label">Recurrence Risk (1-year):</div>
+                <div class="result-value" id="recurrenceRisk"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Risk Probability:</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="riskBar" style="width: 0%"></div>
+                </div>
+                <div id="riskValue" style="margin-top: 10px;"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Risk Factors:</div>
+                <div id="riskFactors"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Surveillance Recommendations:</div>
+                <div id="recommendations"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This model predicts bladder cancer recurrence risk by analyzing histopathology images and clinical features. Bladder cancer has a high recurrence rate, and early identification of high-risk patients enables more intensive surveillance.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/andrewmvd/bladder-cancer-histopathology" target="_blank">Bladder Cancer Histopathology</a></p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+

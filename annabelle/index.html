@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pediatric Bone Fracture Classification - Annabelle</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Pediatric Bone Fracture Classification</h1>
+        <p class="subtitle">Classify pediatric bone fractures from X-ray images</p>
+        
+        <div class="upload-section">
+            <h2>Upload Pediatric X-Ray Image</h2>
+            <div class="upload-area">
+                <input type="file" id="imageInput" class="file-input" accept="image/*">
+                <label for="imageInput" class="file-label">Choose X-Ray Image</label>
+            </div>
+            <div class="preview-section" id="previewSection" style="display: none;">
+                <img id="previewImage" class="preview-image" alt="Preview">
+            </div>
+            <div class="form-group" style="margin-top: 20px;">
+                <label class="form-label">Patient Age (years):</label>
+                <input type="number" class="form-input" id="age" min="0" max="18" step="0.1">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Anatomical Region:</label>
+                <select class="form-input" id="region">
+                    <option value="">Select region (optional)</option>
+                    <option value="wrist">Wrist</option>
+                    <option value="elbow">Elbow</option>
+                    <option value="shoulder">Shoulder</option>
+                    <option value="ankle">Ankle</option>
+                    <option value="knee">Knee</option>
+                    <option value="hip">Hip</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <button id="predictBtn" class="predict-btn" disabled>Classify Fracture</button>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Classification Results</h2>
+            <div class="result-item">
+                <div class="result-label">Fracture Present:</div>
+                <div class="result-value" id="fracturePresent"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Fracture Type:</div>
+                <div class="result-value" id="fractureType"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Confidence:</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="confidenceBar" style="width: 0%"></div>
+                </div>
+                <div id="confidenceValue" style="margin-top: 10px;"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Fracture Type Distribution:</div>
+                <div id="fractureTypes"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This deep learning model classifies pediatric bone fractures from X-ray images. Pediatric fractures have unique characteristics compared to adult fractures, and accurate classification is important for appropriate treatment planning.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/vbookshelf/fracture-detection-in-xray-images" target="_blank">Fracture Detection in X-Ray Images</a></p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+

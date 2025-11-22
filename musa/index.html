@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanoparticle Drug Delivery Efficiency - Musa</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Nanoparticle Drug Delivery Efficiency Prediction</h1>
+        <p class="subtitle">Predict nanoparticle drug delivery efficiency from molecular descriptors and cell line characteristics</p>
+        
+        <div class="upload-section">
+            <h2>Enter Nanoparticle and Cell Line Data</h2>
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label class="form-label">Particle Size (nm):</label>
+                    <input type="number" class="form-input" id="particleSize" step="0.1" min="10" max="500" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Surface Charge (zeta potential, mV):</label>
+                    <input type="number" class="form-input" id="surfaceCharge" min="-50" max="50" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Hydrophobicity Index:</label>
+                    <input type="number" class="form-input" id="hydrophobicity" step="0.01" min="0" max="10" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Molecular Weight (Da):</label>
+                    <input type="number" class="form-input" id="molecularWeight" min="100" max="100000" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Cell Line Type:</label>
+                    <select class="form-input" id="cellLine" required>
+                        <option value="cancer">Cancer Cell Line</option>
+                        <option value="normal">Normal Cell Line</option>
+                        <option value="stem">Stem Cell Line</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Targeting Ligand:</label>
+                    <select class="form-input" id="targeting" required>
+                        <option value="none">None</option>
+                        <option value="antibody">Antibody</option>
+                        <option value="peptide">Peptide</option>
+                        <option value="aptamer">Aptamer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Drug Loading Capacity (%):</label>
+                    <input type="number" class="form-input" id="drugLoading" step="0.1" min="0" max="50" required>
+                </div>
+                <button type="submit" class="predict-btn">Predict Delivery Efficiency</button>
+            </form>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Prediction Results</h2>
+            <div class="result-item">
+                <div class="result-label">Predicted Efficiency:</div>
+                <div class="result-value" id="efficiency"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Efficiency Score:</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="efficiencyBar" style="width: 0%"></div>
+                </div>
+                <div id="efficiencyValue" style="margin-top: 10px;"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Optimization Recommendations:</div>
+                <div id="recommendations"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This model predicts nanoparticle drug delivery efficiency based on molecular descriptors and cell line characteristics. Understanding factors affecting delivery efficiency is crucial for designing effective nanomedicine formulations.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/andrewmvd/nanoparticle-drug-delivery" target="_blank">Nanoparticle Drug Delivery</a></p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiac Valve Abnormality Classification - Josh</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Cardiac Valve Abnormality Classification</h1>
+        <p class="subtitle">Classify cardiac valve abnormalities from echocardiogram images</p>
+        
+        <div class="upload-section">
+            <h2>Upload Echocardiogram Image</h2>
+            <div class="upload-area">
+                <input type="file" id="imageInput" class="file-input" accept="image/*">
+                <label for="imageInput" class="file-label">Choose Echocardiogram Image</label>
+            </div>
+            <div class="preview-section" id="previewSection" style="display: none;">
+                <img id="previewImage" class="preview-image" alt="Preview">
+            </div>
+            <div class="form-group" style="margin-top: 20px;">
+                <label class="form-label">Valve Type:</label>
+                <select class="form-input" id="valveType">
+                    <option value="">Select valve (optional)</option>
+                    <option value="aortic">Aortic</option>
+                    <option value="mitral">Mitral</option>
+                    <option value="tricuspid">Tricuspid</option>
+                    <option value="pulmonary">Pulmonary</option>
+                </select>
+            </div>
+            <button id="predictBtn" class="predict-btn" disabled>Classify Valve Abnormality</button>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Classification Results</h2>
+            <div class="result-item">
+                <div class="result-label">Predicted Abnormality:</div>
+                <div class="result-value" id="abnormality"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Confidence:</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="confidenceBar" style="width: 0%"></div>
+                </div>
+                <div id="confidenceValue" style="margin-top: 10px;"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Abnormality Distribution:</div>
+                <div id="abnormalityDistribution"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Clinical Implications:</div>
+                <div id="implications"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This deep learning model classifies cardiac valve abnormalities from echocardiogram images. Accurate detection of valve abnormalities is crucial for diagnosis and treatment planning in cardiology.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/andrewmvd/echocardiogram-valve-classification" target="_blank">Echocardiogram Valve Classification</a></p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+

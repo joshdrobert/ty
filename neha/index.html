@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neonatal Sepsis Prediction - Neha</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Neonatal Sepsis Prediction</h1>
+        <p class="subtitle">Predict neonatal sepsis from maternal and delivery data plus early vitals</p>
+        
+        <div class="upload-section">
+            <h2>Enter Patient Data</h2>
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label class="form-label">Gestational Age (weeks):</label>
+                    <input type="number" class="form-input" id="gestationalAge" min="24" max="42" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Birth Weight (grams):</label>
+                    <input type="number" class="form-input" id="birthWeight" min="500" max="5000" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Maternal Fever (>38°C):</label>
+                    <select class="form-input" id="maternalFever" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Prolonged Rupture of Membranes (>18 hours):</label>
+                    <select class="form-input" id="prom" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Heart Rate (bpm):</label>
+                    <input type="number" class="form-input" id="heartRate" min="80" max="220" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Temperature (°C):</label>
+                    <input type="number" class="form-input" id="temperature" step="0.1" min="35" max="40" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Respiratory Rate (per min):</label>
+                    <input type="number" class="form-input" id="respiratoryRate" min="20" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">White Blood Cell Count (×10³/μL):</label>
+                    <input type="number" class="form-input" id="wbc" step="0.1" min="1" max="50" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">C-Reactive Protein (mg/L):</label>
+                    <input type="number" class="form-input" id="crp" step="0.1" min="0" max="200" required>
+                </div>
+                <button type="submit" class="predict-btn">Predict Sepsis Risk</button>
+            </form>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Prediction Results</h2>
+            <div class="result-item">
+                <div class="result-label">Sepsis Risk:</div>
+                <div class="result-value" id="sepsisRisk"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Risk Probability:</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="riskBar" style="width: 0%"></div>
+                </div>
+                <div id="riskValue" style="margin-top: 10px;"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Risk Factors Identified:</div>
+                <div id="riskFactors"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Clinical Recommendations:</div>
+                <div id="recommendations"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This model predicts neonatal sepsis risk from maternal and delivery factors combined with early vital signs and laboratory values. Early detection of sepsis is critical for improving outcomes in neonates.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/andrewmvd/neonatal-sepsis-prediction" target="_blank">Neonatal Sepsis Prediction</a></p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetic Retinopathy Detection - Charmaine</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Diabetic Retinopathy Severity Detection</h1>
+        <p class="subtitle">Detect diabetic retinopathy severity from retinal fundus images</p>
+        
+        <div class="upload-section">
+            <h2>Upload Retinal Fundus Image</h2>
+            <div class="upload-area">
+                <input type="file" id="imageInput" class="file-input" accept="image/*">
+                <label for="imageInput" class="file-label">Choose Fundus Image</label>
+            </div>
+            <div class="preview-section" id="previewSection" style="display: none;">
+                <img id="previewImage" class="preview-image" alt="Preview">
+            </div>
+            <button id="predictBtn" class="predict-btn" disabled>Detect Retinopathy</button>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Detection Results</h2>
+            <div class="result-item">
+                <div class="result-label">Severity Level:</div>
+                <div class="result-value" id="severityLevel"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Confidence:</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="confidenceBar" style="width: 0%"></div>
+                </div>
+                <div id="confidenceValue" style="margin-top: 10px;"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Severity Distribution:</div>
+                <div id="severityDistribution"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Clinical Recommendations:</div>
+                <div id="recommendations"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This deep learning model detects and classifies diabetic retinopathy severity from retinal fundus images. Diabetic retinopathy is a leading cause of blindness, and early detection is crucial for preventing vision loss.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/tanlikesmath/diabetic-retinopathy-resized" target="_blank">Diabetic Retinopathy Resized</a></p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Disease Chest X-Ray Classifier - Maansi</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Multi-Disease Chest X-Ray Classifier</h1>
+        <p class="subtitle">Classify pneumonia, COVID-19, and normal chest X-rays</p>
+        
+        <div class="upload-section">
+            <h2>Upload Chest X-Ray Image</h2>
+            <div class="upload-area">
+                <input type="file" id="imageInput" class="file-input" accept="image/*">
+                <label for="imageInput" class="file-label">Choose X-Ray Image</label>
+            </div>
+            <div class="preview-section" id="previewSection" style="display: none;">
+                <img id="previewImage" class="preview-image" alt="Preview">
+            </div>
+            <button id="predictBtn" class="predict-btn" disabled>Classify X-Ray</button>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Classification Results</h2>
+            <div class="result-item">
+                <div class="result-label">Predicted Diagnosis:</div>
+                <div class="result-value" id="predictedDiagnosis"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Probability Distribution:</div>
+                <div id="probabilities"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Confidence:</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="confidenceBar" style="width: 0%"></div>
+                </div>
+                <div id="confidenceValue" style="margin-top: 10px;"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This deep learning model classifies chest X-ray images into three categories: Normal, Pneumonia, and COVID-19. The model uses a convolutional neural network trained on a large dataset of chest X-rays to assist in rapid diagnosis.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia" target="_blank">Chest X-Ray Pneumonia Dataset</a></p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+

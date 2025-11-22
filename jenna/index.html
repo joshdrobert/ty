@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opioid Overdose Risk Prediction - Jenna</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Opioid Overdose Risk Prediction</h1>
+        <p class="subtitle">Predict opioid overdose risk from prescription patterns, demographics, and comorbidities</p>
+        
+        <div class="upload-section">
+            <h2>Enter Patient Data</h2>
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label class="form-label">Age:</label>
+                    <input type="number" class="form-input" id="age" min="18" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Gender:</label>
+                    <select class="form-input" id="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Daily Opioid Dose (MME):</label>
+                    <input type="number" class="form-input" id="mme" step="0.1" min="0" max="500" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Number of Opioid Prescriptions (past 3 months):</label>
+                    <input type="number" class="form-input" id="numPrescriptions" min="0" max="20" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Concurrent Benzodiazepine Use:</label>
+                    <select class="form-input" id="benzodiazepine" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">History of Substance Use Disorder:</label>
+                    <select class="form-input" id="sud" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mental Health Disorder:</label>
+                    <select class="form-input" id="mentalHealth" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Chronic Pain Condition:</label>
+                    <select class="form-input" id="chronicPain" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <button type="submit" class="predict-btn">Predict Overdose Risk</button>
+            </form>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Prediction Results</h2>
+            <div class="result-item">
+                <div class="result-label">Overdose Risk (1-year):</div>
+                <div class="result-value" id="overdoseRisk"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Risk Probability:</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="riskBar" style="width: 0%"></div>
+                </div>
+                <div id="riskValue" style="margin-top: 10px;"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Risk Factors:</div>
+                <div id="riskFactors"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Intervention Recommendations:</div>
+                <div id="recommendations"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This model predicts opioid overdose risk from prescription patterns, patient demographics, and comorbidities. Early identification of high-risk patients enables targeted interventions and potentially prevents overdose events.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/apoorvaappu/opioid-overdose-deaths" target="_blank">Opioid Overdose Deaths</a></p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+

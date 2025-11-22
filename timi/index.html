@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Type Prediction - Timi</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Stroke Type Prediction from CT Scans</h1>
+        <p class="subtitle">Predict stroke type (ischemic vs hemorrhagic) from CT scan images</p>
+        
+        <div class="upload-section">
+            <h2>Upload CT Scan Image</h2>
+            <div class="upload-area">
+                <input type="file" id="imageInput" class="file-input" accept="image/*">
+                <label for="imageInput" class="file-label">Choose CT Scan Image</label>
+            </div>
+            <div class="preview-section" id="previewSection" style="display: none;">
+                <img id="previewImage" class="preview-image" alt="Preview">
+            </div>
+            <div class="form-group" style="margin-top: 20px;">
+                <label class="form-label">Time from Symptom Onset (hours):</label>
+                <input type="number" class="form-input" id="timeFromOnset" min="0" max="72" step="0.5">
+            </div>
+            <button id="predictBtn" class="predict-btn" disabled>Classify Stroke Type</button>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Classification Results</h2>
+            <div class="result-item">
+                <div class="result-label">Predicted Stroke Type:</div>
+                <div class="result-value" id="strokeType"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Confidence:</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="confidenceBar" style="width: 0%"></div>
+                </div>
+                <div id="confidenceValue" style="margin-top: 10px;"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Probability Distribution:</div>
+                <div id="probabilities"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Clinical Implications:</div>
+                <div id="implications"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This deep learning model classifies stroke type from CT scan images, distinguishing between ischemic and hemorrhagic strokes. Rapid and accurate classification is critical for appropriate treatment, as management differs significantly between stroke types.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/andrewmvd/stroke-ct-scans" target="_blank">Stroke CT Scans</a></p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acute Kidney Injury Prediction - Aaron</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Projects</a>
+        <h1>Acute Kidney Injury Prediction</h1>
+        <p class="subtitle">Predict acute kidney injury within 48 hours from early biomarkers, vitals, and medication history</p>
+        
+        <div class="upload-section">
+            <h2>Enter Patient Data</h2>
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label class="form-label">Serum Creatinine (mg/dL):</label>
+                    <input type="number" class="form-input" id="creatinine" step="0.01" min="0.5" max="10" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">eGFR (mL/min/1.73m²):</label>
+                    <input type="number" class="form-input" id="egfr" min="10" max="150" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Urine Output (mL/kg/hr):</label>
+                    <input type="number" class="form-input" id="urineOutput" step="0.1" min="0" max="5" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Systolic Blood Pressure (mmHg):</label>
+                    <input type="number" class="form-input" id="sbp" min="70" max="200" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Heart Rate (bpm):</label>
+                    <input type="number" class="form-input" id="heartRate" min="40" max="150" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Nephrotoxic Medications:</label>
+                    <select class="form-input" id="nephrotoxic" required>
+                        <option value="none">None</option>
+                        <option value="ace">ACE Inhibitor/ARB</option>
+                        <option value="nsaid">NSAID</option>
+                        <option value="contrast">Contrast Agent</option>
+                        <option value="multiple">Multiple</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Sepsis:</label>
+                    <select class="form-input" id="sepsis" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Diabetes:</label>
+                    <select class="form-input" id="diabetes" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                <button type="submit" class="predict-btn">Predict AKI Risk</button>
+            </form>
+        </div>
+        
+        <div class="results-section" id="resultsSection">
+            <h2>Prediction Results</h2>
+            <div class="result-item">
+                <div class="result-label">AKI Risk (48-hour):</div>
+                <div class="result-value" id="akiRisk"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Risk Probability:</div>
+                <div class="probability-bar">
+                    <div class="probability-fill" id="riskBar" style="width: 0%"></div>
+                </div>
+                <div id="riskValue" style="margin-top: 10px;"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Risk Factors:</div>
+                <div id="riskFactors"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Clinical Recommendations:</div>
+                <div id="recommendations"></div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>About This Model</h3>
+            <p>This model predicts acute kidney injury (AKI) risk within 48 hours from early biomarkers, vital signs, and medication history. Early prediction enables proactive management and potentially prevents AKI development.</p>
+            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/andrewmvd/acute-kidney-injury-dataset" target="_blank">Acute Kidney Injury Dataset</a></p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+
