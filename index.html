@@ -17,7 +17,7 @@
             padding: 40px 20px;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
         h1 {
@@ -35,8 +35,8 @@
         }
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
             margin-top: 30px;
         }
         .project-card {
@@ -44,173 +44,199 @@
             border-radius: 12px;
             padding: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
             cursor: pointer;
             text-decoration: none;
             color: inherit;
             display: block;
+            border-top: 4px solid;
         }
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 40px rgba(0,0,0,0.3);
         }
         .project-name {
-            font-size: 1.4em;
+            font-size: 1.5em;
             font-weight: bold;
-            color: #667eea;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         .project-specialty {
             color: #666;
-            font-size: 0.9em;
-            margin-bottom: 15px;
+            font-size: 0.85em;
+            margin-bottom: 12px;
             font-style: italic;
         }
         .project-description {
             color: #333;
             line-height: 1.6;
+            font-size: 0.95em;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>TY - Medical AI Research Projects</h1>
-        <p class="subtitle">A collection of machine learning applications in healthcare</p>
+        <p class="subtitle">A collection of 22 machine learning applications in healthcare</p>
         
         <div class="projects-grid">
-            <a href="rucha/" class="project-card">
-                <div class="project-name">Rucha</div>
+            <a href="aaron/index.html" class="project-card" style="border-top-color: #26A69A;">
+                <div class="project-name" style="color: #26A69A;">
+                    🫘 Aaron
+                </div>
+                <div class="project-specialty">Prehospital Care, AKI Biomarkers</div>
+                <div class="project-description">Predicting heart failure from clinical features</div>
+            </a>
+            <a href="amirah/index.html" class="project-card" style="border-top-color: #3F51B5;">
+                <div class="project-name" style="color: #3F51B5;">
+                    🧠 Amirah
+                </div>
+                <div class="project-specialty">Neuromuscular</div>
+                <div class="project-description">Classifying neuromuscular disorders from EMG signal patterns</div>
+            </a>
+            <a href="annabelle/index.html" class="project-card" style="border-top-color: #2196F3;">
+                <div class="project-name" style="color: #2196F3;">
+                    🦴 Annabelle
+                </div>
+                <div class="project-specialty">Pediatrics</div>
+                <div class="project-description">Binary classification of normal vs pneumonia chest X-rays</div>
+            </a>
+            <a href="charmaine/index.html" class="project-card" style="border-top-color: #00BCD4;">
+                <div class="project-name" style="color: #00BCD4;">
+                    👁️ Charmaine
+                </div>
+                <div class="project-specialty">Ophthalmology</div>
+                <div class="project-description">Detecting diabetic retinopathy severity from retinal images</div>
+            </a>
+            <a href="chris/index.html" class="project-card" style="border-top-color: #607D8B;">
+                <div class="project-name" style="color: #607D8B;">
+                    🧠 Chris
+                </div>
+                <div class="project-specialty">Alzheimer's & Dementia</div>
+                <div class="project-description">Classifying brain tumors from MRI scans</div>
+            </a>
+            <a href="cyril/index.html" class="project-card" style="border-top-color: #4CAF50;">
+                <div class="project-name" style="color: #4CAF50;">
+                    🫀 Cyril
+                </div>
+                <div class="project-specialty">Hepatocellular Carcinoma, Computational Biology</div>
+                <div class="project-description">Predicting heart failure from clinical features</div>
+            </a>
+            <a href="eric/index.html" class="project-card" style="border-top-color: #673AB7;">
+                <div class="project-name" style="color: #673AB7;">
+                    ⚡ Eric
+                </div>
+                <div class="project-specialty">BCI, Bioelectronics, Neurosurgery</div>
+                <div class="project-description">Classifying neuromuscular disorders from EMG signal patterns</div>
+            </a>
+            <a href="fouzul/index.html" class="project-card" style="border-top-color: #9C27B0;">
+                <div class="project-name" style="color: #9C27B0;">
+                    🩸 Fouzul
+                </div>
+                <div class="project-specialty">Peripheral Arterial Disease</div>
+                <div class="project-description">Predicting heart failure from clinical features</div>
+            </a>
+            <a href="hannah/index.html" class="project-card" style="border-top-color: #F39C12;">
+                <div class="project-name" style="color: #F39C12;">
+                    💊 Hannah
+                </div>
+                <div class="project-specialty">Aerospace Medicine, Pharmacogenetics</div>
+                <div class="project-description">Predicting drug response from patient characteristics</div>
+            </a>
+            <a href="jenna/index.html" class="project-card" style="border-top-color: #FF5722;">
+                <div class="project-name" style="color: #FF5722;">
+                    🚨 Jenna
+                </div>
+                <div class="project-specialty">Emergency Medicine, Cardiology, Addiction</div>
+                <div class="project-description">Predicting heart failure from clinical features</div>
+            </a>
+            <a href="josh/index.html" class="project-card" style="border-top-color: #EF5350;">
+                <div class="project-name" style="color: #EF5350;">
+                    ❤️ Josh
+                </div>
+                <div class="project-specialty">Cardio, ML, Medical Devices, Imaging</div>
+                <div class="project-description">Predicting heart failure from clinical features</div>
+            </a>
+            <a href="maansi/index.html" class="project-card" style="border-top-color: #6C5CE7;">
+                <div class="project-name" style="color: #6C5CE7;">
+                    🫁 Maansi
+                </div>
+                <div class="project-specialty">AI in Medicine</div>
+                <div class="project-description">Binary classification of normal vs pneumonia chest X-rays</div>
+            </a>
+            <a href="marygrace/index.html" class="project-card" style="border-top-color: #E91E63;">
+                <div class="project-name" style="color: #E91E63;">
+                    👶 Marygrace
+                </div>
+                <div class="project-specialty">OBGYN</div>
+                <div class="project-description">Classifying fetal health status from cardiotocography data</div>
+            </a>
+            <a href="musa/index.html" class="project-card" style="border-top-color: #AB47BC;">
+                <div class="project-name" style="color: #AB47BC;">
+                    🔬 Musa
+                </div>
+                <div class="project-specialty">Drug Delivery, Neuroblastoma</div>
+                <div class="project-description">Predicting drug response from patient characteristics</div>
+            </a>
+            <a href="neha/index.html" class="project-card" style="border-top-color: #FF9800;">
+                <div class="project-name" style="color: #FF9800;">
+                    👶 Neha
+                </div>
+                <div class="project-specialty">Data Analysis, Imaging, Pharmacogenetics</div>
+                <div class="project-description">Predicting heart failure from clinical features</div>
+            </a>
+            <a href="rucha/index.html" class="project-card" style="border-top-color: #FF6B6B;">
+                <div class="project-name" style="color: #FF6B6B;">
+                    🔬 Rucha
+                </div>
                 <div class="project-specialty">Data Science, ML, Bioinformatics, Oncology</div>
                 <div class="project-description">Classify skin cancer from dermoscopy images using CNN</div>
             </a>
-            
-            <a href="sammy/" class="project-card">
-                <div class="project-name">Sammy</div>
-                <div class="project-specialty">Endovascular Devices, Robotics, Surgery</div>
-                <div class="project-description">Predict endovascular procedure success from patient anatomy</div>
-            </a>
-            
-            <a href="shalini/" class="project-card">
-                <div class="project-name">Shalini</div>
-                <div class="project-specialty">Synthetic Biology, Regenerative Medicine</div>
-                <div class="project-description">Predict stem cell differentiation potential from gene expression</div>
-            </a>
-            
-            <a href="maansi/" class="project-card">
-                <div class="project-name">Maansi</div>
-                <div class="project-specialty">AI in Medicine</div>
-                <div class="project-description">Multi-disease classifier from chest X-rays (pneumonia, COVID-19, normal)</div>
-            </a>
-            
-            <a href="hannah/" class="project-card">
-                <div class="project-name">Hannah</div>
-                <div class="project-specialty">Aerospace Medicine, Pharmacogenetics</div>
-                <div class="project-description">Predict drug response phenotypes from genetic variants</div>
-            </a>
-            
-            <a href="marygrace/" class="project-card">
-                <div class="project-name">MaryGrace</div>
-                <div class="project-specialty">OBGYN</div>
-                <div class="project-description">Classify fetal health status from cardiotocography data</div>
-            </a>
-            
-            <a href="charmaine/" class="project-card">
-                <div class="project-name">Charmaine</div>
-                <div class="project-specialty">Ophthalmology</div>
-                <div class="project-description">Detect diabetic retinopathy severity from retinal fundus images</div>
-            </a>
-            
-            <a href="fouzul/" class="project-card">
-                <div class="project-name">Fouzul</div>
-                <div class="project-specialty">Peripheral Arterial Disease</div>
-                <div class="project-description">Predict PAD severity and amputation risk</div>
-            </a>
-            
-            <a href="amirah/" class="project-card">
-                <div class="project-name">Amirah</div>
-                <div class="project-specialty">Neuromuscular</div>
-                <div class="project-description">Classify neuromuscular disorders from EMG signal patterns</div>
-            </a>
-            
-            <a href="neha/" class="project-card">
-                <div class="project-name">Neha</div>
-                <div class="project-specialty">Data Analysis, Imaging, Pharmacogenetics</div>
-                <div class="project-description">Predict neonatal sepsis from maternal and delivery data</div>
-            </a>
-            
-            <a href="annabelle/" class="project-card">
-                <div class="project-name">Annabelle</div>
-                <div class="project-specialty">Pediatrics</div>
-                <div class="project-description">Classify pediatric bone fractures from X-ray images</div>
-            </a>
-            
-            <a href="timi/" class="project-card">
-                <div class="project-name">Timi</div>
-                <div class="project-specialty">Stroke</div>
-                <div class="project-description">Predict stroke type (ischemic vs hemorrhagic) from CT scans</div>
-            </a>
-            
-            <a href="eric/" class="project-card">
-                <div class="project-name">Eric</div>
-                <div class="project-specialty">BCI, Bioelectronics, Neurosurgery</div>
-                <div class="project-description">Classify motor intent from EEG signals for BCI applications</div>
-            </a>
-            
-            <a href="cyril/" class="project-card">
-                <div class="project-name">Cyril</div>
-                <div class="project-specialty">Hepatocellular Carcinoma, Computational Biology</div>
-                <div class="project-description">Predict HCC recurrence risk from gene expression signatures</div>
-            </a>
-            
-            <a href="chris/" class="project-card">
-                <div class="project-name">Chris</div>
-                <div class="project-specialty">Alzheimer's & Dementia</div>
-                <div class="project-description">Classify Alzheimer's disease stages from brain MRI scans</div>
-            </a>
-            
-            <a href="stephan/" class="project-card">
-                <div class="project-name">Stephan</div>
-                <div class="project-specialty">Space Medicine</div>
-                <div class="project-description">Predict motion sickness severity from physiological monitoring</div>
-            </a>
-            
-            <a href="sabour/" class="project-card">
-                <div class="project-name">Sabour</div>
+            <a href="sabour/index.html" class="project-card" style="border-top-color: #E53935;">
+                <div class="project-name" style="color: #E53935;">
+                    🔬 Sabour
+                </div>
                 <div class="project-specialty">Urology, Oncology</div>
-                <div class="project-description">Predict bladder cancer recurrence from histopathology images</div>
+                <div class="project-description">Classifying breast cancer from clinical features</div>
             </a>
-            
-            <a href="musa/" class="project-card">
-                <div class="project-name">Musa</div>
-                <div class="project-specialty">Drug Delivery, Neuroblastoma</div>
-                <div class="project-description">Predict nanoparticle drug delivery efficiency</div>
+            <a href="sammy/index.html" class="project-card" style="border-top-color: #4ECDC4;">
+                <div class="project-name" style="color: #4ECDC4;">
+                    ❤️ Sammy
+                </div>
+                <div class="project-specialty">Endovascular Devices, Robotics, Surgery</div>
+                <div class="project-description">Predict heart failure from clinical features</div>
             </a>
-            
-            <a href="aaron/" class="project-card">
-                <div class="project-name">Aaron</div>
-                <div class="project-specialty">Prehospital Care, AKI Biomarkers</div>
-                <div class="project-description">Predict acute kidney injury within 48 hours</div>
+            <a href="shalini/index.html" class="project-card" style="border-top-color: #95E1D3;">
+                <div class="project-name" style="color: #95E1D3;">
+                    🧬 Shalini
+                </div>
+                <div class="project-specialty">Synthetic Biology, Regenerative Medicine</div>
+                <div class="project-description">Multi-class classification of Iris species</div>
             </a>
-            
-            <a href="josh/" class="project-card">
-                <div class="project-name">Josh</div>
-                <div class="project-specialty">Cardio, ML, Medical Devices, Imaging</div>
-                <div class="project-description">Classify cardiac valve abnormalities from echocardiogram images</div>
+            <a href="stephan/index.html" class="project-card" style="border-top-color: #00ACC1;">
+                <div class="project-name" style="color: #00ACC1;">
+                    🚀 Stephan
+                </div>
+                <div class="project-specialty">Space Medicine</div>
+                <div class="project-description">Predicting heart failure from clinical features</div>
             </a>
-            
-            <a href="jenna/" class="project-card">
-                <div class="project-name">Jenna</div>
-                <div class="project-specialty">Emergency Medicine, Cardiology, Addiction</div>
-                <div class="project-description">Predict opioid overdose risk from prescription patterns</div>
-            </a>
-            
-            <a href="taha/" class="project-card">
-                <div class="project-name">Taha</div>
+            <a href="taha/index.html" class="project-card" style="border-top-color: #5C6BC0;">
+                <div class="project-name" style="color: #5C6BC0;">
+                    💓 Taha
+                </div>
                 <div class="project-specialty">Cardio</div>
-                <div class="project-description">Predict coronary artery disease from cardiac CT angiography</div>
+                <div class="project-description">Predicting heart failure from clinical features</div>
+            </a>
+            <a href="timi/index.html" class="project-card" style="border-top-color: #F44336;">
+                <div class="project-name" style="color: #F44336;">
+                    ⚡ Timi
+                </div>
+                <div class="project-specialty">Stroke</div>
+                <div class="project-description">Predicting stroke risk from patient data</div>
             </a>
         </div>
     </div>
 </body>
 </html>
-

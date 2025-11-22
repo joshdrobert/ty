@@ -1,11 +1,47 @@
-node_modules/
-.DS_Store
-*.log
-*.pyc
+# Python
 __pycache__/
-.env
-*.model
-*.h5
-*.pkl
-*.joblib
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
 
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Model files (too large for git - users train locally)
+**/models/*.h5
+**/models/*.h5.*
+
+# Data directories (too large for git - users download from Kaggle)
+**/data/
+
+# Static pages (generated files)
+docs/
+**/static_pages/
+
+# Temporary files
+*.tmp
+*.bak

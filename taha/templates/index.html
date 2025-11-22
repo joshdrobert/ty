@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Failure Prediction - Taha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Projects</a>
+        <h1>💓 Heart Failure Prediction</h1>
+        <p class="subtitle">Predicting heart failure from clinical features</p>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label>Filter by Class:</label>
+                <select id="classFilter">
+                    <option value="all">All Classes</option>
+                    <option value="No Heart Failure">No Heart Failure</option>
+                    <option value="Heart Failure">Heart Failure</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <button id="randomBtn" class="btn">Random Sample</button>
+                <button id="loadSamplesBtn" class="btn">Load Samples</button>
+            </div>
+        </div>
+        
+        <div class="sample-selector">
+            <h2>Select Test Sample</h2>
+            <div id="samplesList" class="samples-grid"></div>
+        </div>
+        
+        <div class="prediction-section" id="predictionSection" style="display: none;">
+            <h2>Prediction Results</h2>
+            <div class="result-card">
+                <div class="result-item">
+                    <span class="label">True Label:</span>
+                    <span id="trueLabel" class="value"></span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Predicted Label:</span>
+                    <span id="predictedLabel" class="value"></span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Confidence:</span>
+                    <span id="confidence" class="value"></span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Probabilities:</span>
+                    <div id="probabilities"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bulk-analysis" id="bulkAnalysis" style="display: none;">
+            <h2>Bulk Analysis Results</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <span class="metric-label">Total Samples:</span>
+                    <span id="totalSamples" class="metric-value">0</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Correct:</span>
+                    <span id="correctSamples" class="metric-value">0</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Accuracy:</span>
+                    <span id="overallAccuracy" class="metric-value">0%</span>
+                </div>
+            </div>
+            <div id="classMetrics"></div>
+        </div>
+        
+        <div class="actions">
+            <button id="predictBtn" class="btn btn-primary" disabled>Predict Selected</button>
+            <button id="bulkPredictBtn" class="btn btn-secondary" disabled>Bulk Analysis (All Samples)</button>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
