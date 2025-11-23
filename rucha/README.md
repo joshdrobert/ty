@@ -1,63 +1,132 @@
-# Skin Cancer Classification from Dermoscopy Images
+# Skin Cancer Classification - AI Diagnostic Tool
 
-**Researcher:** Rucha  
-**Specialty:** Data Science, ML, Bioinformatics, Image Processing, Oncology  
-**Dataset:** [Skin Cancer Malignant vs Benign](https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign)
+A professional web-based AI tool for classifying skin lesions as benign or malignant using deep learning. Deployed on GitHub Pages with TensorFlow.js for browser-based inference.
 
-## Abstract
+## 🎯 Features
 
-Early detection of skin cancer is critical for improving patient outcomes. This study presents a convolutional neural network (CNN) approach for automated classification of skin lesions from dermoscopy images as malignant or benign. The model was trained on a dataset of dermoscopy images and achieved promising performance in distinguishing between malignant and benign lesions, demonstrating the potential for AI-assisted dermatological diagnosis.
+- **Interactive Image Gallery**: Browse and select from pre-loaded test images
+- **Real-time AI Analysis**: Instant predictions with confidence scores
+- **Visual Results**: Probability bars and confidence indicators
+- **Clinical Interpretation**: AI-generated insights with medical disclaimers
+- **Professional UI**: Modern, responsive design optimized for medical applications
 
-## Introduction
+## 📊 Dataset
 
-Skin cancer is one of the most common types of cancer worldwide, with melanoma being particularly dangerous if not detected early. Dermoscopy, a non-invasive imaging technique, allows dermatologists to visualize skin lesions in greater detail. However, accurate interpretation requires significant expertise and can be time-consuming. Machine learning, particularly deep learning with CNNs, offers the potential to assist clinicians by providing automated, rapid, and consistent classification of skin lesions. This project aims to develop a CNN model capable of distinguishing between malignant and benign skin lesions from dermoscopy images, potentially aiding in early detection and reducing diagnostic delays.
+**Kaggle Dataset**: [Skin Cancer Malignant vs Benign](https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign)
 
-## Methods
+The dataset contains dermoscopy images of skin lesions labeled as either benign or malignant.
 
-### Dataset
-The model was trained on the Skin Cancer Malignant vs Benign dataset from Kaggle, which contains dermoscopy images of various skin lesions labeled as either malignant or benign. The dataset was split into training, validation, and test sets with appropriate class balancing.
+## 🚀 Setup Instructions
 
-### Model Architecture
-A convolutional neural network was designed with the following components:
-- Input layer accepting preprocessed dermoscopy images (224x224 pixels)
-- Multiple convolutional layers with ReLU activation and batch normalization
-- Max pooling layers for dimensionality reduction
-- Dropout layers to prevent overfitting
-- Fully connected layers for final classification
-- Output layer with sigmoid activation for binary classification
+### 1. Download Dataset
 
-### Training
-The model was trained using:
-- Data augmentation (rotation, flipping, brightness adjustment)
-- Transfer learning from pre-trained ImageNet models
-- Adam optimizer with learning rate scheduling
-- Binary cross-entropy loss function
-- Early stopping based on validation performance
+```bash
+# Install kagglehub if needed
+pip install kagglehub
 
-### Evaluation Metrics
-- Accuracy, sensitivity, specificity
-- ROC-AUC score
-- Precision and recall
+# Run the download script
+python download_data.py
+```
 
-## Results
+This will:
+- Download the dataset from Kaggle
+- Select 20 random test images from each class
+- Save them to `data/test/` directory
 
-The CNN model demonstrated strong performance in classifying skin lesions:
-- **Accuracy:** ~85-90% on test set
-- **Sensitivity:** High detection rate for malignant lesions
-- **Specificity:** Good performance in identifying benign lesions
-- **ROC-AUC:** >0.90
+### 2. Train the Model
 
-The model successfully learned discriminative features from dermoscopy images, with attention maps showing focus on lesion borders, color patterns, and texture characteristics that are clinically relevant for diagnosis.
+```bash
+python train_model.py
+```
 
-## Conclusion
+This will:
+- Train a CNN model on the dataset
+- Save the best model to `models/best_model.h5`
+- Use data augmentation and validation split
 
-This study demonstrates the feasibility of using CNNs for automated skin cancer classification from dermoscopy images. The model shows promise as a diagnostic aid, potentially improving early detection rates and reducing the burden on dermatologists. Future work should focus on expanding the dataset diversity, incorporating clinical metadata, and validating the model in real-world clinical settings. Integration with electronic health records and mobile health applications could further enhance accessibility and impact.
+### 3. Convert Model to TensorFlow.js
 
-## Usage
+You need to convert the Keras `.h5` model to TensorFlow.js format:
 
-1. Upload a dermoscopy image using the interface
-2. Click "Classify Skin Lesion" to get predictions
-3. Review the classification results and confidence scores
+```bash
+# Install tensorflowjs
+pip install tensorflowjs
 
-**Note:** This is a demonstration interface. For production use, a trained model should be loaded and deployed.
+# Convert the model
+tensorflowjs_converter --input_format=keras models/best_model.h5 models/
+```
+
+This creates `models/model.json` and weight files that can be loaded in the browser.
+
+### 4. Prepare Test Images for GitHub Pages
+
+Copy test images to a location accessible by the HTML file:
+
+```bash
+# Create a web-accessible directory
+mkdir -p data/test
+
+# Copy test images (already done by download_data.py)
+# Ensure images are committed to git for GitHub Pages
+```
+
+### 5. Update Model Path
+
+In `app.js`, ensure the `MODEL_PATH` points to your converted model:
+
+```javascript
+const MODEL_PATH = 'models/model.json'; // Relative to index.html
+```
+
+### 6. Deploy to GitHub Pages
+
+1. Commit all files to your repository
+2. Go to repository Settings → Pages
+3. Select the branch and folder (usually `docs/` or root)
+4. Your site will be available at `https://[username].github.io/[repo]/rucha/`
+
+## 📁 Project Structure
+
+```
+rucha/
+├── index.html          # Main HTML interface
+├── style.css           # Professional styling
+├── app.js              # TensorFlow.js inference logic
+├── download_data.py    # Kaggle dataset download script
+├── train_model.py      # Model training script
+├── models/             # Trained models (gitignored)
+│   ├── best_model.h5
+│   └── model.json      # TensorFlow.js model
+├── data/               # Dataset (gitignored)
+│   ├── train/
+│   └── test/           # Test images for UI
+└── README.md           # This file
+```
+
+## 🔧 Technical Details
+
+- **Framework**: TensorFlow.js for browser-based inference
+- **Model Architecture**: CNN with 4 convolutional layers + dense layers
+- **Input Size**: 224x224 RGB images
+- **Classes**: Benign (0), Malignant (1)
+- **Deployment**: Static HTML/CSS/JS (GitHub Pages compatible)
+
+## ⚠️ Medical Disclaimer
+
+This tool is for **educational and research purposes only**. It should **NOT** be used as a substitute for professional medical diagnosis, treatment, or advice. Always consult with qualified healthcare professionals for medical concerns.
+
+## 📝 Notes
+
+- The model uses a mock prediction function if the actual model file is not found (for development)
+- Test images should be committed to the repository for GitHub Pages deployment
+- Model files are large and should be handled via Git LFS or external hosting
+- The UI automatically handles model loading errors gracefully
+
+## 🎨 UI Features
+
+- **Status Indicator**: Shows model loading status
+- **Image Gallery**: Grid layout with hover effects
+- **Analysis Panel**: Split view with image and results
+- **Confidence Visualization**: Progress bars and percentages
+- **Responsive Design**: Works on desktop and mobile devices
 

@@ -1,0 +1,1167 @@
+[
+  {
+    "path": "data/test/benign_1005.jpg",
+    "label": "benign",
+    "id": 0
+  },
+  {
+    "path": "data/test/benign_1008.jpg",
+    "label": "benign",
+    "id": 1
+  },
+  {
+    "path": "data/test/benign_1017.jpg",
+    "label": "benign",
+    "id": 2
+  },
+  {
+    "path": "data/test/benign_1026.jpg",
+    "label": "benign",
+    "id": 3
+  },
+  {
+    "path": "data/test/benign_1032.jpg",
+    "label": "benign",
+    "id": 4
+  },
+  {
+    "path": "data/test/benign_1040.jpg",
+    "label": "benign",
+    "id": 5
+  },
+  {
+    "path": "data/test/benign_1054.jpg",
+    "label": "benign",
+    "id": 6
+  },
+  {
+    "path": "data/test/benign_109.jpg",
+    "label": "benign",
+    "id": 7
+  },
+  {
+    "path": "data/test/benign_1103.jpg",
+    "label": "benign",
+    "id": 8
+  },
+  {
+    "path": "data/test/benign_1104.jpg",
+    "label": "benign",
+    "id": 9
+  },
+  {
+    "path": "data/test/benign_1120.jpg",
+    "label": "benign",
+    "id": 10
+  },
+  {
+    "path": "data/test/benign_1122.jpg",
+    "label": "benign",
+    "id": 11
+  },
+  {
+    "path": "data/test/benign_1124.jpg",
+    "label": "benign",
+    "id": 12
+  },
+  {
+    "path": "data/test/benign_1128.jpg",
+    "label": "benign",
+    "id": 13
+  },
+  {
+    "path": "data/test/benign_1133.jpg",
+    "label": "benign",
+    "id": 14
+  },
+  {
+    "path": "data/test/benign_1137.jpg",
+    "label": "benign",
+    "id": 15
+  },
+  {
+    "path": "data/test/benign_1167.jpg",
+    "label": "benign",
+    "id": 16
+  },
+  {
+    "path": "data/test/benign_118.jpg",
+    "label": "benign",
+    "id": 17
+  },
+  {
+    "path": "data/test/benign_1182.jpg",
+    "label": "benign",
+    "id": 18
+  },
+  {
+    "path": "data/test/benign_1193.jpg",
+    "label": "benign",
+    "id": 19
+  },
+  {
+    "path": "data/test/benign_1221.jpg",
+    "label": "benign",
+    "id": 20
+  },
+  {
+    "path": "data/test/benign_1222.jpg",
+    "label": "benign",
+    "id": 21
+  },
+  {
+    "path": "data/test/benign_1264.jpg",
+    "label": "benign",
+    "id": 22
+  },
+  {
+    "path": "data/test/benign_13.jpg",
+    "label": "benign",
+    "id": 23
+  },
+  {
+    "path": "data/test/benign_1303.jpg",
+    "label": "benign",
+    "id": 24
+  },
+  {
+    "path": "data/test/benign_1307.jpg",
+    "label": "benign",
+    "id": 25
+  },
+  {
+    "path": "data/test/benign_1314.jpg",
+    "label": "benign",
+    "id": 26
+  },
+  {
+    "path": "data/test/benign_1346.jpg",
+    "label": "benign",
+    "id": 27
+  },
+  {
+    "path": "data/test/benign_1352.jpg",
+    "label": "benign",
+    "id": 28
+  },
+  {
+    "path": "data/test/benign_1363.jpg",
+    "label": "benign",
+    "id": 29
+  },
+  {
+    "path": "data/test/benign_1366.jpg",
+    "label": "benign",
+    "id": 30
+  },
+  {
+    "path": "data/test/benign_1380.jpg",
+    "label": "benign",
+    "id": 31
+  },
+  {
+    "path": "data/test/benign_1388.jpg",
+    "label": "benign",
+    "id": 32
+  },
+  {
+    "path": "data/test/benign_1395.jpg",
+    "label": "benign",
+    "id": 33
+  },
+  {
+    "path": "data/test/benign_1403.jpg",
+    "label": "benign",
+    "id": 34
+  },
+  {
+    "path": "data/test/benign_1418.jpg",
+    "label": "benign",
+    "id": 35
+  },
+  {
+    "path": "data/test/benign_1434.jpg",
+    "label": "benign",
+    "id": 36
+  },
+  {
+    "path": "data/test/benign_1451.jpg",
+    "label": "benign",
+    "id": 37
+  },
+  {
+    "path": "data/test/benign_151.jpg",
+    "label": "benign",
+    "id": 38
+  },
+  {
+    "path": "data/test/benign_1517.jpg",
+    "label": "benign",
+    "id": 39
+  },
+  {
+    "path": "data/test/benign_1560.jpg",
+    "label": "benign",
+    "id": 40
+  },
+  {
+    "path": "data/test/benign_1599.jpg",
+    "label": "benign",
+    "id": 41
+  },
+  {
+    "path": "data/test/benign_1601.jpg",
+    "label": "benign",
+    "id": 42
+  },
+  {
+    "path": "data/test/benign_1603.jpg",
+    "label": "benign",
+    "id": 43
+  },
+  {
+    "path": "data/test/benign_1614.jpg",
+    "label": "benign",
+    "id": 44
+  },
+  {
+    "path": "data/test/benign_1619.jpg",
+    "label": "benign",
+    "id": 45
+  },
+  {
+    "path": "data/test/benign_1638.jpg",
+    "label": "benign",
+    "id": 46
+  },
+  {
+    "path": "data/test/benign_1650.jpg",
+    "label": "benign",
+    "id": 47
+  },
+  {
+    "path": "data/test/benign_1661.jpg",
+    "label": "benign",
+    "id": 48
+  },
+  {
+    "path": "data/test/benign_169.jpg",
+    "label": "benign",
+    "id": 49
+  },
+  {
+    "path": "data/test/benign_171.jpg",
+    "label": "benign",
+    "id": 50
+  },
+  {
+    "path": "data/test/benign_1720.jpg",
+    "label": "benign",
+    "id": 51
+  },
+  {
+    "path": "data/test/benign_1727.jpg",
+    "label": "benign",
+    "id": 52
+  },
+  {
+    "path": "data/test/benign_1736.jpg",
+    "label": "benign",
+    "id": 53
+  },
+  {
+    "path": "data/test/benign_176.jpg",
+    "label": "benign",
+    "id": 54
+  },
+  {
+    "path": "data/test/benign_1775.jpg",
+    "label": "benign",
+    "id": 55
+  },
+  {
+    "path": "data/test/benign_1779.jpg",
+    "label": "benign",
+    "id": 56
+  },
+  {
+    "path": "data/test/benign_1790.jpg",
+    "label": "benign",
+    "id": 57
+  },
+  {
+    "path": "data/test/benign_1792.jpg",
+    "label": "benign",
+    "id": 58
+  },
+  {
+    "path": "data/test/benign_1794.jpg",
+    "label": "benign",
+    "id": 59
+  },
+  {
+    "path": "data/test/benign_183.jpg",
+    "label": "benign",
+    "id": 60
+  },
+  {
+    "path": "data/test/benign_184.jpg",
+    "label": "benign",
+    "id": 61
+  },
+  {
+    "path": "data/test/benign_206.jpg",
+    "label": "benign",
+    "id": 62
+  },
+  {
+    "path": "data/test/benign_258.jpg",
+    "label": "benign",
+    "id": 63
+  },
+  {
+    "path": "data/test/benign_269.jpg",
+    "label": "benign",
+    "id": 64
+  },
+  {
+    "path": "data/test/benign_277.jpg",
+    "label": "benign",
+    "id": 65
+  },
+  {
+    "path": "data/test/benign_281.jpg",
+    "label": "benign",
+    "id": 66
+  },
+  {
+    "path": "data/test/benign_306.jpg",
+    "label": "benign",
+    "id": 67
+  },
+  {
+    "path": "data/test/benign_328.jpg",
+    "label": "benign",
+    "id": 68
+  },
+  {
+    "path": "data/test/benign_33.jpg",
+    "label": "benign",
+    "id": 69
+  },
+  {
+    "path": "data/test/benign_347.jpg",
+    "label": "benign",
+    "id": 70
+  },
+  {
+    "path": "data/test/benign_390.jpg",
+    "label": "benign",
+    "id": 71
+  },
+  {
+    "path": "data/test/benign_391.jpg",
+    "label": "benign",
+    "id": 72
+  },
+  {
+    "path": "data/test/benign_397.jpg",
+    "label": "benign",
+    "id": 73
+  },
+  {
+    "path": "data/test/benign_408.jpg",
+    "label": "benign",
+    "id": 74
+  },
+  {
+    "path": "data/test/benign_443.jpg",
+    "label": "benign",
+    "id": 75
+  },
+  {
+    "path": "data/test/benign_46.jpg",
+    "label": "benign",
+    "id": 76
+  },
+  {
+    "path": "data/test/benign_460.jpg",
+    "label": "benign",
+    "id": 77
+  },
+  {
+    "path": "data/test/benign_472.jpg",
+    "label": "benign",
+    "id": 78
+  },
+  {
+    "path": "data/test/benign_478.jpg",
+    "label": "benign",
+    "id": 79
+  },
+  {
+    "path": "data/test/benign_48.jpg",
+    "label": "benign",
+    "id": 80
+  },
+  {
+    "path": "data/test/benign_490.jpg",
+    "label": "benign",
+    "id": 81
+  },
+  {
+    "path": "data/test/benign_498.jpg",
+    "label": "benign",
+    "id": 82
+  },
+  {
+    "path": "data/test/benign_52.jpg",
+    "label": "benign",
+    "id": 83
+  },
+  {
+    "path": "data/test/benign_540.jpg",
+    "label": "benign",
+    "id": 84
+  },
+  {
+    "path": "data/test/benign_543.jpg",
+    "label": "benign",
+    "id": 85
+  },
+  {
+    "path": "data/test/benign_58.jpg",
+    "label": "benign",
+    "id": 86
+  },
+  {
+    "path": "data/test/benign_6.jpg",
+    "label": "benign",
+    "id": 87
+  },
+  {
+    "path": "data/test/benign_609.jpg",
+    "label": "benign",
+    "id": 88
+  },
+  {
+    "path": "data/test/benign_627.jpg",
+    "label": "benign",
+    "id": 89
+  },
+  {
+    "path": "data/test/benign_628.jpg",
+    "label": "benign",
+    "id": 90
+  },
+  {
+    "path": "data/test/benign_640.jpg",
+    "label": "benign",
+    "id": 91
+  },
+  {
+    "path": "data/test/benign_673.jpg",
+    "label": "benign",
+    "id": 92
+  },
+  {
+    "path": "data/test/benign_679.jpg",
+    "label": "benign",
+    "id": 93
+  },
+  {
+    "path": "data/test/benign_691.jpg",
+    "label": "benign",
+    "id": 94
+  },
+  {
+    "path": "data/test/benign_705.jpg",
+    "label": "benign",
+    "id": 95
+  },
+  {
+    "path": "data/test/benign_713.jpg",
+    "label": "benign",
+    "id": 96
+  },
+  {
+    "path": "data/test/benign_742.jpg",
+    "label": "benign",
+    "id": 97
+  },
+  {
+    "path": "data/test/benign_795.jpg",
+    "label": "benign",
+    "id": 98
+  },
+  {
+    "path": "data/test/benign_803.jpg",
+    "label": "benign",
+    "id": 99
+  },
+  {
+    "path": "data/test/benign_817.jpg",
+    "label": "benign",
+    "id": 100
+  },
+  {
+    "path": "data/test/benign_834.jpg",
+    "label": "benign",
+    "id": 101
+  },
+  {
+    "path": "data/test/benign_843.jpg",
+    "label": "benign",
+    "id": 102
+  },
+  {
+    "path": "data/test/benign_85.jpg",
+    "label": "benign",
+    "id": 103
+  },
+  {
+    "path": "data/test/benign_868.jpg",
+    "label": "benign",
+    "id": 104
+  },
+  {
+    "path": "data/test/benign_871.jpg",
+    "label": "benign",
+    "id": 105
+  },
+  {
+    "path": "data/test/benign_877.jpg",
+    "label": "benign",
+    "id": 106
+  },
+  {
+    "path": "data/test/benign_882.jpg",
+    "label": "benign",
+    "id": 107
+  },
+  {
+    "path": "data/test/benign_884.jpg",
+    "label": "benign",
+    "id": 108
+  },
+  {
+    "path": "data/test/benign_913.jpg",
+    "label": "benign",
+    "id": 109
+  },
+  {
+    "path": "data/test/benign_92.jpg",
+    "label": "benign",
+    "id": 110
+  },
+  {
+    "path": "data/test/benign_937.jpg",
+    "label": "benign",
+    "id": 111
+  },
+  {
+    "path": "data/test/benign_94.jpg",
+    "label": "benign",
+    "id": 112
+  },
+  {
+    "path": "data/test/benign_945.jpg",
+    "label": "benign",
+    "id": 113
+  },
+  {
+    "path": "data/test/benign_948.jpg",
+    "label": "benign",
+    "id": 114
+  },
+  {
+    "path": "data/test/benign_996.jpg",
+    "label": "benign",
+    "id": 115
+  },
+  {
+    "path": "data/test/malignant_1008.jpg",
+    "label": "malignant",
+    "id": 116
+  },
+  {
+    "path": "data/test/malignant_1011.jpg",
+    "label": "malignant",
+    "id": 117
+  },
+  {
+    "path": "data/test/malignant_1017.jpg",
+    "label": "malignant",
+    "id": 118
+  },
+  {
+    "path": "data/test/malignant_1020.jpg",
+    "label": "malignant",
+    "id": 119
+  },
+  {
+    "path": "data/test/malignant_1024.jpg",
+    "label": "malignant",
+    "id": 120
+  },
+  {
+    "path": "data/test/malignant_1034.jpg",
+    "label": "malignant",
+    "id": 121
+  },
+  {
+    "path": "data/test/malignant_1045.jpg",
+    "label": "malignant",
+    "id": 122
+  },
+  {
+    "path": "data/test/malignant_1057.jpg",
+    "label": "malignant",
+    "id": 123
+  },
+  {
+    "path": "data/test/malignant_1072.jpg",
+    "label": "malignant",
+    "id": 124
+  },
+  {
+    "path": "data/test/malignant_1082.jpg",
+    "label": "malignant",
+    "id": 125
+  },
+  {
+    "path": "data/test/malignant_1095.jpg",
+    "label": "malignant",
+    "id": 126
+  },
+  {
+    "path": "data/test/malignant_1114.jpg",
+    "label": "malignant",
+    "id": 127
+  },
+  {
+    "path": "data/test/malignant_1129.jpg",
+    "label": "malignant",
+    "id": 128
+  },
+  {
+    "path": "data/test/malignant_1154.jpg",
+    "label": "malignant",
+    "id": 129
+  },
+  {
+    "path": "data/test/malignant_117.jpg",
+    "label": "malignant",
+    "id": 130
+  },
+  {
+    "path": "data/test/malignant_1223.jpg",
+    "label": "malignant",
+    "id": 131
+  },
+  {
+    "path": "data/test/malignant_1226.jpg",
+    "label": "malignant",
+    "id": 132
+  },
+  {
+    "path": "data/test/malignant_125.jpg",
+    "label": "malignant",
+    "id": 133
+  },
+  {
+    "path": "data/test/malignant_128.jpg",
+    "label": "malignant",
+    "id": 134
+  },
+  {
+    "path": "data/test/malignant_1281.jpg",
+    "label": "malignant",
+    "id": 135
+  },
+  {
+    "path": "data/test/malignant_1284.jpg",
+    "label": "malignant",
+    "id": 136
+  },
+  {
+    "path": "data/test/malignant_1294.jpg",
+    "label": "malignant",
+    "id": 137
+  },
+  {
+    "path": "data/test/malignant_130.jpg",
+    "label": "malignant",
+    "id": 138
+  },
+  {
+    "path": "data/test/malignant_1302.jpg",
+    "label": "malignant",
+    "id": 139
+  },
+  {
+    "path": "data/test/malignant_1311.jpg",
+    "label": "malignant",
+    "id": 140
+  },
+  {
+    "path": "data/test/malignant_1314.jpg",
+    "label": "malignant",
+    "id": 141
+  },
+  {
+    "path": "data/test/malignant_133.jpg",
+    "label": "malignant",
+    "id": 142
+  },
+  {
+    "path": "data/test/malignant_1334.jpg",
+    "label": "malignant",
+    "id": 143
+  },
+  {
+    "path": "data/test/malignant_1337.jpg",
+    "label": "malignant",
+    "id": 144
+  },
+  {
+    "path": "data/test/malignant_1345.jpg",
+    "label": "malignant",
+    "id": 145
+  },
+  {
+    "path": "data/test/malignant_1346.jpg",
+    "label": "malignant",
+    "id": 146
+  },
+  {
+    "path": "data/test/malignant_1373.jpg",
+    "label": "malignant",
+    "id": 147
+  },
+  {
+    "path": "data/test/malignant_1386.jpg",
+    "label": "malignant",
+    "id": 148
+  },
+  {
+    "path": "data/test/malignant_1392.jpg",
+    "label": "malignant",
+    "id": 149
+  },
+  {
+    "path": "data/test/malignant_1394.jpg",
+    "label": "malignant",
+    "id": 150
+  },
+  {
+    "path": "data/test/malignant_1416.jpg",
+    "label": "malignant",
+    "id": 151
+  },
+  {
+    "path": "data/test/malignant_1421.jpg",
+    "label": "malignant",
+    "id": 152
+  },
+  {
+    "path": "data/test/malignant_1437.jpg",
+    "label": "malignant",
+    "id": 153
+  },
+  {
+    "path": "data/test/malignant_1448.jpg",
+    "label": "malignant",
+    "id": 154
+  },
+  {
+    "path": "data/test/malignant_1460.jpg",
+    "label": "malignant",
+    "id": 155
+  },
+  {
+    "path": "data/test/malignant_1465.jpg",
+    "label": "malignant",
+    "id": 156
+  },
+  {
+    "path": "data/test/malignant_1467.jpg",
+    "label": "malignant",
+    "id": 157
+  },
+  {
+    "path": "data/test/malignant_1473.jpg",
+    "label": "malignant",
+    "id": 158
+  },
+  {
+    "path": "data/test/malignant_151.jpg",
+    "label": "malignant",
+    "id": 159
+  },
+  {
+    "path": "data/test/malignant_163.jpg",
+    "label": "malignant",
+    "id": 160
+  },
+  {
+    "path": "data/test/malignant_18.jpg",
+    "label": "malignant",
+    "id": 161
+  },
+  {
+    "path": "data/test/malignant_19.jpg",
+    "label": "malignant",
+    "id": 162
+  },
+  {
+    "path": "data/test/malignant_203.jpg",
+    "label": "malignant",
+    "id": 163
+  },
+  {
+    "path": "data/test/malignant_204.jpg",
+    "label": "malignant",
+    "id": 164
+  },
+  {
+    "path": "data/test/malignant_210.jpg",
+    "label": "malignant",
+    "id": 165
+  },
+  {
+    "path": "data/test/malignant_213.jpg",
+    "label": "malignant",
+    "id": 166
+  },
+  {
+    "path": "data/test/malignant_216.jpg",
+    "label": "malignant",
+    "id": 167
+  },
+  {
+    "path": "data/test/malignant_249.jpg",
+    "label": "malignant",
+    "id": 168
+  },
+  {
+    "path": "data/test/malignant_26.jpg",
+    "label": "malignant",
+    "id": 169
+  },
+  {
+    "path": "data/test/malignant_263.jpg",
+    "label": "malignant",
+    "id": 170
+  },
+  {
+    "path": "data/test/malignant_270.jpg",
+    "label": "malignant",
+    "id": 171
+  },
+  {
+    "path": "data/test/malignant_272.jpg",
+    "label": "malignant",
+    "id": 172
+  },
+  {
+    "path": "data/test/malignant_280.jpg",
+    "label": "malignant",
+    "id": 173
+  },
+  {
+    "path": "data/test/malignant_293.jpg",
+    "label": "malignant",
+    "id": 174
+  },
+  {
+    "path": "data/test/malignant_297.jpg",
+    "label": "malignant",
+    "id": 175
+  },
+  {
+    "path": "data/test/malignant_304.jpg",
+    "label": "malignant",
+    "id": 176
+  },
+  {
+    "path": "data/test/malignant_308.jpg",
+    "label": "malignant",
+    "id": 177
+  },
+  {
+    "path": "data/test/malignant_369.jpg",
+    "label": "malignant",
+    "id": 178
+  },
+  {
+    "path": "data/test/malignant_374.jpg",
+    "label": "malignant",
+    "id": 179
+  },
+  {
+    "path": "data/test/malignant_38.jpg",
+    "label": "malignant",
+    "id": 180
+  },
+  {
+    "path": "data/test/malignant_385.jpg",
+    "label": "malignant",
+    "id": 181
+  },
+  {
+    "path": "data/test/malignant_386.jpg",
+    "label": "malignant",
+    "id": 182
+  },
+  {
+    "path": "data/test/malignant_396.jpg",
+    "label": "malignant",
+    "id": 183
+  },
+  {
+    "path": "data/test/malignant_40.jpg",
+    "label": "malignant",
+    "id": 184
+  },
+  {
+    "path": "data/test/malignant_401.jpg",
+    "label": "malignant",
+    "id": 185
+  },
+  {
+    "path": "data/test/malignant_406.jpg",
+    "label": "malignant",
+    "id": 186
+  },
+  {
+    "path": "data/test/malignant_43.jpg",
+    "label": "malignant",
+    "id": 187
+  },
+  {
+    "path": "data/test/malignant_431.jpg",
+    "label": "malignant",
+    "id": 188
+  },
+  {
+    "path": "data/test/malignant_432.jpg",
+    "label": "malignant",
+    "id": 189
+  },
+  {
+    "path": "data/test/malignant_465.jpg",
+    "label": "malignant",
+    "id": 190
+  },
+  {
+    "path": "data/test/malignant_471.jpg",
+    "label": "malignant",
+    "id": 191
+  },
+  {
+    "path": "data/test/malignant_480.jpg",
+    "label": "malignant",
+    "id": 192
+  },
+  {
+    "path": "data/test/malignant_485.jpg",
+    "label": "malignant",
+    "id": 193
+  },
+  {
+    "path": "data/test/malignant_487.jpg",
+    "label": "malignant",
+    "id": 194
+  },
+  {
+    "path": "data/test/malignant_494.jpg",
+    "label": "malignant",
+    "id": 195
+  },
+  {
+    "path": "data/test/malignant_499.jpg",
+    "label": "malignant",
+    "id": 196
+  },
+  {
+    "path": "data/test/malignant_500.jpg",
+    "label": "malignant",
+    "id": 197
+  },
+  {
+    "path": "data/test/malignant_513.jpg",
+    "label": "malignant",
+    "id": 198
+  },
+  {
+    "path": "data/test/malignant_514.jpg",
+    "label": "malignant",
+    "id": 199
+  },
+  {
+    "path": "data/test/malignant_524.jpg",
+    "label": "malignant",
+    "id": 200
+  },
+  {
+    "path": "data/test/malignant_531.jpg",
+    "label": "malignant",
+    "id": 201
+  },
+  {
+    "path": "data/test/malignant_533.jpg",
+    "label": "malignant",
+    "id": 202
+  },
+  {
+    "path": "data/test/malignant_583.jpg",
+    "label": "malignant",
+    "id": 203
+  },
+  {
+    "path": "data/test/malignant_587.jpg",
+    "label": "malignant",
+    "id": 204
+  },
+  {
+    "path": "data/test/malignant_589.jpg",
+    "label": "malignant",
+    "id": 205
+  },
+  {
+    "path": "data/test/malignant_598.jpg",
+    "label": "malignant",
+    "id": 206
+  },
+  {
+    "path": "data/test/malignant_608.jpg",
+    "label": "malignant",
+    "id": 207
+  },
+  {
+    "path": "data/test/malignant_611.jpg",
+    "label": "malignant",
+    "id": 208
+  },
+  {
+    "path": "data/test/malignant_627.jpg",
+    "label": "malignant",
+    "id": 209
+  },
+  {
+    "path": "data/test/malignant_63.jpg",
+    "label": "malignant",
+    "id": 210
+  },
+  {
+    "path": "data/test/malignant_64.jpg",
+    "label": "malignant",
+    "id": 211
+  },
+  {
+    "path": "data/test/malignant_652.jpg",
+    "label": "malignant",
+    "id": 212
+  },
+  {
+    "path": "data/test/malignant_666.jpg",
+    "label": "malignant",
+    "id": 213
+  },
+  {
+    "path": "data/test/malignant_671.jpg",
+    "label": "malignant",
+    "id": 214
+  },
+  {
+    "path": "data/test/malignant_691.jpg",
+    "label": "malignant",
+    "id": 215
+  },
+  {
+    "path": "data/test/malignant_708.jpg",
+    "label": "malignant",
+    "id": 216
+  },
+  {
+    "path": "data/test/malignant_727.jpg",
+    "label": "malignant",
+    "id": 217
+  },
+  {
+    "path": "data/test/malignant_758.jpg",
+    "label": "malignant",
+    "id": 218
+  },
+  {
+    "path": "data/test/malignant_768.jpg",
+    "label": "malignant",
+    "id": 219
+  },
+  {
+    "path": "data/test/malignant_78.jpg",
+    "label": "malignant",
+    "id": 220
+  },
+  {
+    "path": "data/test/malignant_806.jpg",
+    "label": "malignant",
+    "id": 221
+  },
+  {
+    "path": "data/test/malignant_82.jpg",
+    "label": "malignant",
+    "id": 222
+  },
+  {
+    "path": "data/test/malignant_869.jpg",
+    "label": "malignant",
+    "id": 223
+  },
+  {
+    "path": "data/test/malignant_882.jpg",
+    "label": "malignant",
+    "id": 224
+  },
+  {
+    "path": "data/test/malignant_910.jpg",
+    "label": "malignant",
+    "id": 225
+  },
+  {
+    "path": "data/test/malignant_961.jpg",
+    "label": "malignant",
+    "id": 226
+  },
+  {
+    "path": "data/test/malignant_964.jpg",
+    "label": "malignant",
+    "id": 227
+  },
+  {
+    "path": "data/test/malignant_971.jpg",
+    "label": "malignant",
+    "id": 228
+  },
+  {
+    "path": "data/test/malignant_977.jpg",
+    "label": "malignant",
+    "id": 229
+  },
+  {
+    "path": "data/test/malignant_982.jpg",
+    "label": "malignant",
+    "id": 230
+  },
+  {
+    "path": "data/test/malignant_989.jpg",
+    "label": "malignant",
+    "id": 231
+  },
+  {
+    "path": "data/test/malignant_998.jpg",
+    "label": "malignant",
+    "id": 232
+  }
+]

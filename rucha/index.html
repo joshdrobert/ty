@@ -3,54 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skin Cancer Classification - Rucha</title>
-    <link rel="stylesheet" href="../shared-styles.css">
+    <title>Skin Cancer Classification - AI Diagnostic Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <a href="../" class="back-link">← Back to Projects</a>
-        <h1>Skin Cancer Classification from Dermoscopy Images</h1>
-        <p class="subtitle">CNN-based classification of malignant vs benign skin lesions</p>
-        
-        <div class="upload-section">
-            <h2>Upload Dermoscopy Image</h2>
-            <div class="upload-area">
-                <input type="file" id="imageInput" class="file-input" accept="image/*">
-                <label for="imageInput" class="file-label">Choose Image</label>
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🔬 Skin Cancer Classification</h1>
+                <p class="subtitle">AI-Powered Benign vs Malignant Detection</p>
             </div>
-            <div class="preview-section" id="previewSection" style="display: none;">
-                <img id="previewImage" class="preview-image" alt="Preview">
-            </div>
-            <button id="predictBtn" class="predict-btn" disabled>Classify Skin Lesion</button>
-        </div>
-        
-        <div class="results-section" id="resultsSection">
-            <h2>Classification Results</h2>
-            <div class="result-item">
-                <div class="result-label">Predicted Class:</div>
-                <div class="result-value" id="predictedClass"></div>
-            </div>
-            <div class="result-item">
-                <div class="result-label">Confidence:</div>
-                <div class="probability-bar">
-                    <div class="probability-fill" id="confidenceBar" style="width: 0%"></div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Model Status -->
+            <section class="status-section">
+                <div id="modelStatus" class="status-card">
+                    <div class="status-icon">⏳</div>
+                    <p>Loading AI model...</p>
                 </div>
-                <div id="confidenceValue" style="margin-top: 10px;"></div>
-            </div>
-            <div class="result-item">
-                <div class="result-label">Probability Distribution:</div>
-                <div id="probabilities"></div>
-            </div>
-        </div>
-        
-        <div class="info-section">
-            <h3>About This Model</h3>
-            <p>This CNN model classifies skin lesions from dermoscopy images as either malignant or benign. The model was trained on the Skin Cancer Malignant vs Benign dataset from Kaggle, which contains dermoscopy images of various skin lesions.</p>
-            <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign" target="_blank">Skin Cancer Malignant vs Benign</a></p>
-        </div>
+            </section>
+
+            <!-- Test Images Gallery -->
+            <section class="gallery-section">
+                <h2>Select Test Image</h2>
+                <div id="imageGallery" class="image-gallery">
+                    <p class="loading-text">Loading test images...</p>
+                </div>
+            </section>
+
+            <!-- Analysis Section -->
+            <section id="analysisSection" class="analysis-section hidden">
+                <h2>Analysis Results</h2>
+                <div class="analysis-container">
+                    <!-- Selected Image -->
+                    <div class="selected-image-container">
+                        <h3>Selected Image</h3>
+                        <div class="image-wrapper">
+                            <img id="selectedImage" src="" alt="Selected test image">
+                        </div>
+                    </div>
+
+                    <!-- Prediction Results -->
+                    <div class="results-container">
+                        <h3>AI Prediction</h3>
+                        <div class="prediction-card">
+                            <div class="prediction-header">
+                                <span class="prediction-label" id="predictionLabel">-</span>
+                                <span class="prediction-confidence" id="predictionConfidence">-</span>
+                            </div>
+                            <div class="confidence-bar-container">
+                                <div class="confidence-bar">
+                                    <div id="confidenceBar" class="confidence-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Class Probabilities -->
+                        <div class="probabilities">
+                            <h4>Class Probabilities</h4>
+                            <div class="probability-item">
+                                <span class="class-name">Benign</span>
+                                <div class="probability-bar">
+                                    <div id="benignProb" class="probability-fill benign-fill"></div>
+                                </div>
+                                <span id="benignPercent" class="probability-value">0%</span>
+                            </div>
+                            <div class="probability-item">
+                                <span class="class-name">Malignant</span>
+                                <div class="probability-bar">
+                                    <div id="malignantProb" class="probability-fill malignant-fill"></div>
+                                </div>
+                                <span id="malignantPercent" class="probability-value">0%</span>
+                            </div>
+                        </div>
+
+                        <!-- Interpretation -->
+                        <div class="interpretation">
+                            <h4>Clinical Interpretation</h4>
+                            <p id="interpretationText" class="interpretation-text">
+                                Select an image to see AI analysis and clinical interpretation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info Section -->
+            <section class="info-section">
+                <h2>About This Tool</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>📊 Dataset</h3>
+                        <p>Skin Cancer Malignant vs Benign dataset from Kaggle, containing dermoscopy images of skin lesions.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🤖 AI Model</h3>
+                        <p>Deep learning CNN model trained to classify skin lesions as benign or malignant with high accuracy.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>⚠️ Disclaimer</h3>
+                        <p>This tool is for educational purposes only and should not replace professional medical diagnosis.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Skin Cancer Classification AI Tool | Research Project</p>
+        </footer>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+
     <script src="app.js"></script>
 </body>
 </html>

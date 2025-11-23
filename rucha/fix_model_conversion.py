@@ -1,0 +1,50 @@
+"""
+Fix model conversion for TensorFlow.js compatibility
+This script helps re-convert the model with better settings
+"""
+import os
+import json
+from pathlib import Path
+
+print("=" * 60)
+print("TensorFlow.js Model Conversion Fix")
+print("=" * 60)
+print()
+print("The current model was converted from Keras 3.x which has")
+print("compatibility issues with TensorFlow.js.")
+print()
+print("SOLUTION: Re-convert the model using one of these methods:")
+print()
+print("Method 1: Use the updated Colab notebook")
+print("  - The notebook now uses quantization for better compatibility")
+print("  - Upload your best_model.h5 to Colab")
+print("  - Run the conversion cell")
+print("  - Download the new model files")
+print()
+print("Method 2: Re-convert locally with better settings")
+print("  Run this command:")
+print()
+print("  tensorflowjs_converter \\")
+print("    --input_format=keras \\")
+print("    --quantization_bytes=1 \\")
+print("    --output_format=tfjs_layers_model \\")
+print("    models/best_model.h5 \\")
+print("    models/")
+print()
+print("Method 3: Save as SavedModel first, then convert")
+print("  This provides better compatibility:")
+print()
+print("  # In Python:")
+print("  import tensorflow as tf")
+print("  model = tf.keras.models.load_model('models/best_model.h5')")
+print("  tf.saved_model.save(model, 'models/saved_model')")
+print()
+print("  # Then convert:")
+print("  tensorflowjs_converter \\")
+print("    --input_format=tf_saved_model \\")
+print("    --output_format=tfjs_layers_model \\")
+print("    models/saved_model \\")
+print("    models/")
+print()
+print("=" * 60)
+
